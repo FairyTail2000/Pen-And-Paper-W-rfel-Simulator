@@ -25,7 +25,6 @@ int spielerspeichern (struct player towrite[], int groe);
 void spielerausgeben (char Name_des_spielers[]);
 void init();
 int openscript();
-void gencharakter ();
 struct player spieler_[20];
 int aktuell = 0;
 char *berufe[9];

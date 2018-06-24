@@ -12,8 +12,11 @@
 #include <string.h>
 #include "wuerfeln.h"
 
+// Forward declaration
+void gencharakter ();
+
 FILE *scritfile;
-char *scriptcontent[1024][1024];
+char scriptcontent[1024][1024];
 int readscript();
 int execscript();
 void wuerfel(int wuerfel,int augenzahl);
@@ -57,11 +60,11 @@ int readscript() {
 }
 
 int execscript() {
-	char* temp[1024];
+	char temp[1024];
 	int i = 0;
 	while (1) {
 		strncpy(temp, scriptcontent[thisline], sizeof(scriptcontent[thisline]));
-		if (temp[i] == NULL) {
+		if (temp == NULL) {
 			break;
 		}
 
